@@ -1,3 +1,1 @@
-Try it here
-
-https://nainainai17.github.io/Emoji-Search-Engine-in-react/
+Emoji search engine. Search by object keyword or title. 

@@ -35,10 +35,11 @@ class App extends React.Component {
         style={{
           border: '.5px solid #C0E8F9',
           backgroundColor: '#70E4EF',
-          height: '200px',
-          padding: '20px',
+          height: '300px',
+          padding: '40px',
           color: '#EF709D',
-          textShadow: '.5px .7px  .3px #F038FF',
+          textShadow: '1px .7px  .3px #00A3A0',
+          fontFamily: 'Montserrat',
         }}
       >
         <Header />

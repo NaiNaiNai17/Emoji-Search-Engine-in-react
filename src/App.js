@@ -1,16 +1,29 @@
 import React from 'react';
+import EmojiContainer from './components/EmojiContainer';
 import Header from './components/header';
 import emojilist from './json/emoji.json';
+console.log(emojilist);
 
 class App extends React.Component {
-  state = { searchValue: '' };
+  state = { searchValue: '', emojiData: emojilist };
 
   grabValueFromInput = (e) => {
     console.log('user is typing');
 
     //store input data into state
+    let filterEmoji = emojilist.filter((item) => {
+      let inputValue = e.target.value.toLowerCase();
+      if (item.title.toLowerCase().includes(inputValue)) {
+        return true;
+      }
+      if (item.keywords.toLowerCase().includes(inputValue)) {
+        return true;
+      }
+      return false;
+    });
     this.setState({
       searchValue: e.target.value,
+      emojiData: filterEmoji,
     });
   };
 
@@ -20,7 +33,7 @@ class App extends React.Component {
       <div
         className='App'
         style={{
-          border: '.5px solid #3772FF',
+          border: '.5px solid #C0E8F9',
           backgroundColor: '#70E4EF',
           height: '200px',
           padding: '20px',
@@ -44,6 +57,7 @@ class App extends React.Component {
             onChange={this.grabValueFromInput}
           />
         </div>
+        <EmojiContainer emojiData={this.state.emojiData} />
       </div>
     );
   }

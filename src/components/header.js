@@ -10,7 +10,7 @@ export default function Header() {
         <GitHubButton
           href='https://github.com/NaiNaiNai17'
           data-icon='octicon-star'
-          data-text='star'
+          data-text='followers'
           data-show-count={true}
           data-size='large'
         />
@@ -18,7 +18,7 @@ export default function Header() {
         <GitHubButton
           href='https://github.com/NaiNaiNai17'
           data-icon='octicon-repo-forked'
-          data-text='fork'
+          data-text='forked'
           data-show-count={true}
           data-size='large'
         />
